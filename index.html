@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍎 食物热量识别工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🍎 食物热量识别工具</h1>
+            <p>上传食物图片，AI智能分析热量并标记高热量食物</p>
+        </header>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📷</div>
+                    <p>点击或拖拽图片到此处</p>
+                    <button class="upload-btn" id="uploadBtn">选择图片</button>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+                <div class="preview-area" id="previewArea" style="display: none;">
+                    <img id="previewImage" alt="预览图片">
+                    <button class="analyze-btn" id="analyzeBtn">🔍 分析热量</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="analysis-tabs">
+                    <button class="tab-btn active" data-tab="high-calorie">🔥 高热量食物</button>
+                    <button class="tab-btn" data-tab="medium-calorie">⚡ 中热量食物</button>
+                    <button class="tab-btn" data-tab="low-calorie">🥬 低热量食物</button>
+                    <button class="tab-btn" data-tab="calories">📊 总热量</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="high-calorie">
+                        <p class="placeholder">请先上传图片进行分析</p>
+                    </div>
+                    <div class="tab-pane" id="medium-calorie">
+                        <p class="placeholder">请先上传图片进行分析</p>
+                    </div>
+                    <div class="tab-pane" id="low-calorie">
+                        <p class="placeholder">请先上传图片进行分析</p>
+                    </div>
+                    <div class="tab-pane" id="calories">
+                        <p class="placeholder">请先上传图片进行分析</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>AI正在分析中...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
